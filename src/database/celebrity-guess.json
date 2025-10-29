@@ -1,0 +1,98 @@
+[
+    {
+        "id": 0,
+        "image": "/games/images/celebrity/1.jpeg",
+        "original_image": "/games/images/celebrity/1_og.jpeg",
+        "answer": "kunjakko"
+    },
+    {
+        "id": 1,
+        "image": "/games/images/celebrity/2.jpeg",
+        "original_image": "/games/images/celebrity/2_og.jpeg",
+        "answer": "PEPE"
+    },
+    {
+        "id": 2,
+        "image": "/games/images/celebrity/3.jpeg",
+        "original_image": "/games/images/celebrity/3_og.jpeg",
+        "answer": "Mohanlal"
+    },
+    {
+        "id": 3,
+        "image": "/games/images/celebrity/4.jpeg",
+        "original_image": "/games/images/celebrity/4_og.jpeg",
+        "answer": "Vijay"
+    },
+    {
+        "id": 4,
+        "image": "/games/images/celebrity/5.jpeg",
+        "original_image": "/games/images/celebrity/5_og.jpeg",
+        "answer": "Robert Downey Jr"
+    },
+    {
+        "id": 5,
+        "image": "/games/images/celebrity/6.jpeg",
+        "original_image": "/games/images/celebrity/6_og.jpeg",
+        "answer": "Ronaldo"
+    },
+    {
+        "id": 6,
+        "image": "/games/images/celebrity/7.jpeg",
+        "original_image": "/games/images/celebrity/7_og.jpeg",
+        "answer": "PERLY"
+    },
+    {
+        "id": 7,
+        "image": "/games/images/celebrity/8.jpeg",
+        "original_image": "/games/images/celebrity/8_og.jpeg",
+        "answer": "ELON MUSK"
+    },
+    {
+        "id": 8,
+        "image": "/games/images/celebrity/9.jpeg",
+        "original_image": "/games/images/celebrity/9_og.jpeg",
+        "answer": "Kim Jong Un"
+    },
+    {
+        "id": 9,
+        "image": "/games/images/celebrity/10.jpeg",
+        "original_image": "/games/images/celebrity/10_og.jpeg",
+        "answer": "Jeff Bezos"
+    },
+    {
+        "id": 10,
+        "image": "/games/images/celebrity/11.jpeg",
+        "original_image": "/games/images/celebrity/11_og.jpeg",
+        "answer": "Michael Jackson"
+    },
+    {
+        "id": 11,
+        "image": "/games/images/celebrity/12.jpeg",
+        "original_image": "/games/images/celebrity/12_og.jpeg",
+        "answer": "Mamitha"
+    },
+    {
+        "id": 12,
+        "image": "/games/images/celebrity/13.jpeg",
+        "original_image": "/games/images/celebrity/13_og.jpeg",
+        "answer": "Tovino"
+    },
+    {
+        "id": 13,
+        "image": "/games/images/celebrity/14.jpeg",
+        "original_image": "/games/images/celebrity/14_og.jpeg",
+        "answer": "Indira Gandhi"
+    },
+    {
+        "id": 14,
+        "image": "/games/images/celebrity/15.jpeg",
+        "original_image": "/games/images/celebrity/15_og.jpeg",
+        "answer": "Ishow Speed"
+    },
+    {
+        "id": 15,
+        "image": "/games/images/celebrity/16.jpeg",
+        "original_image": "/games/images/celebrity/16_og.jpeg",
+        "answer": "Vedan"
+    }
+]

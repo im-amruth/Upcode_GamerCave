@@ -1,0 +1,18 @@
+[
+    { "id": 0, "image": "/games/images/emoji/1.jpeg", "original_image": "/games/images/emoji/1_og.jpeg", "time": 10 },
+    { "id": 1, "image": "/games/images/emoji/2.jpeg", "original_image": "/games/images/emoji/2_og.jpeg", "time": 10 },
+    { "id": 2, "image": "/games/images/emoji/3.jpeg", "original_image": "/games/images/emoji/3_og.jpeg", "time": 10 },
+    { "id": 3, "image": "/games/images/emoji/4.jpeg", "original_image": "/games/images/emoji/4_og.jpeg", "time": 10 },
+    { "id": 4, "image": "/games/images/emoji/5.jpeg", "original_image": "/games/images/emoji/5_og.jpeg", "time": 10 },
+    { "id": 5, "image": "/games/images/emoji/6.jpeg", "original_image": "/games/images/emoji/6_og.jpeg", "time": 10 },
+    { "id": 6, "image": "/games/images/emoji/7.jpeg", "original_image": "/games/images/emoji/7_og.jpeg", "time": 10 },
+    { "id": 7, "image": "/games/images/emoji/8.jpeg", "original_image": "/games/images/emoji/8_og.jpeg", "time": 10 },
+    { "id": 8, "image": "/games/images/emoji/9.jpeg", "original_image": "/games/images/emoji/9_og.jpeg", "time": 10 },
+    { "id": 9, "image": "/games/images/emoji/10.jpeg", "original_image": "/games/images/emoji/10_og.jpeg", "time": 10 },
+    { "id": 10, "image": "/games/images/emoji/11.jpeg", "original_image": "/games/images/emoji/11_og.jpeg", "time": 10 },
+    { "id": 11, "image": "/games/images/emoji/12.jpeg", "original_image": "/games/images/emoji/12_og.jpeg", "time": 10 },
+    { "id": 12, "image": "/games/images/emoji/13.jpeg", "original_image": "/games/images/emoji/13_og.jpeg", "time": 10 },
+    { "id": 13, "image": "/games/images/emoji/14.jpeg", "original_image": "/games/images/emoji/14_og.jpeg", "time": 10 },
+    { "id": 14, "image": "/games/images/emoji/15.jpeg", "original_image": "/games/images/emoji/15_og.jpeg", "time": 10 },
+    { "id": 15, "image": "/games/images/emoji/16.jpeg", "original_image": "/games/images/emoji/16_og.jpeg", "time": 10 }
+  ]

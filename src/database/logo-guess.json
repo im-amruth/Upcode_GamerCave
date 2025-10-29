@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "image": "/games/images/logo/meta.jpeg",
+        "answer": "Meta"
+    },
+    {
+        "id": 1,
+        "image": "/games/images/logo/edge.jpeg",
+        "answer": "Microsoft Edge"
+    },
+    {
+        "id": 2,
+        "image": "/games/images/logo/starbucks.png",
+        "answer": "Starbucks"
+    },
+    {
+        "id": 3,
+        "image": "/games/images/logo/deepseek.jpeg",
+        "answer": "Deepseek"
+    },
+    {
+        "id": 4,
+        "image": "/games/images/logo/firefox.jpeg",
+        "answer": "Firefox"
+    },
+    {
+        "id": 5,
+        "image": "/games/images/logo/McLaren.jpeg",
+        "answer": "McLaren"
+    },
+    {
+        "id": 6,
+        "image": "/games/images/logo/jordan.jpeg",
+        "answer": "Jordan"
+    },
+    {
+        "id": 7,
+        "image": "/games/images/logo/rolex.jpeg",
+        "answer": "Rolex"
+    },
+    {
+        "id": 8,
+        "image": "/games/images/logo/unilever.jpeg",
+        "answer": "Unilever"
+    },
+    {
+        "id": 9,
+        "image": "/games/images/logo/tesla.jpg",
+        "answer": "Tesla"
+    },
+    {
+        "id": 10,
+        "image": "/games/images/logo/amongUs.jpeg",
+        "answer": "Among Us"
+    },
+    {
+        "id": 11,
+        "image": "/games/images/logo/WHO.jpeg",
+        "answer": "WHO"
+    },
+    {
+        "id": 12,
+        "image": "/games/images/logo/reliance.jpeg",
+        "answer": "Reliance industries"
+    },
+    {
+        "id": 13,
+        "image": "/games/images/logo/post.jpeg",
+        "answer": "Indian post"
+    },
+    {
+        "id": 14,
+        "image": "/games/images/logo/xbox.jpeg",
+        "answer": "Xbox"
+    },
+    {
+        "id": 15,
+        "image": "/games/images/logo/motorola.jpeg",
+        "answer": "Motorola"
+    }
+]
