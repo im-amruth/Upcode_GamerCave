@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 import GameCard from '../components/GameCard';
 import { Link } from "react-router-dom";
+import { koans } from "../data/koans";
+import { timeAgo } from "../utils/timeManager";
 
 const StatCard = ({  Icon=Layout, label, value, trend }) => (
   <div className="bg-[#1a2622] border border-[#00ff87]/10 rounded-xl p-6 hover:border-[#00ff87]/30 transition-all duration-300">
@@ -37,7 +39,7 @@ const ActivityItem = ({ title, time, type }) => (
     </div>
     <div className="flex-1">
       <p className="text-[#e8f5e9] font-medium text-sm">{title}</p>
-      <p className="text-[#7a9681] text-xs mt-1">{time}</p>
+      <p className="text-[#7a9681] text-xs mt-1">{timeAgo(time) || time}</p>
     </div>
   </div>
 );
@@ -85,10 +87,10 @@ const Dashboard = () => {
 
           {/* Stats Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <StatCard icon={Gamepad2} label="Total Games" value="12" trend="+2 this week" />
-            <StatCard icon={Code} label="Lines of Code" value="15.2K" trend="+1.2K" />
-            <StatCard icon={Users} label="Community" value="847" trend="+23" />
-            <StatCard icon={Trophy} label="Achievements" value="28" trend="+3" />
+            <StatCard icon={Gamepad2} label="Total Games" value="7" trend="+5 new added" />
+            <StatCard icon={Code} label="Workshop Materials" value={koans.length || 4} trend="15+ Koans" />
+            <StatCard icon={Users} label="Cheatsheets" value="6" trend="+6" />
+            <StatCard icon={Trophy} label="Community" value="10" trend="3 new members" />
           </div>
 
           {/* Main Grid */}
@@ -96,13 +98,13 @@ const Dashboard = () => {
             {/* Projects Section */}
             <div className="lg:col-span-2 space-y-6">
               <div className="flex items-center justify-between">
-                <h3 className="text-2xl font-bold text-[#e8f5e9]">Available games</h3>
+                <h3 className="text-2xl font-bold text-[#e8f5e9]">Popular Games</h3>
                 <Link to="/games" className="px-4 py-2 bg-[#00ff87] hover:bg-[#4ade80] text-[#0a0f0d] rounded-lg font-medium text-sm transition-all">
-                  Explore Games
+                  Explore More
                 </Link>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-center">
                 {games.map((game, idx) => (
                   <GameCard key={idx} {...game} />
                 ))}
@@ -114,10 +116,10 @@ const Dashboard = () => {
               <div>
                 <h3 className="text-xl font-bold text-[#e8f5e9] mb-4">Recent Activity</h3>
                 <div className="space-y-3">
-                  <ActivityItem title="Completed Space Invaders" time="2 hours ago" type="game" />
-                  <ActivityItem title="Pushed to GitHub" time="5 hours ago" type="code" />
-                  <ActivityItem title="Started Pixel Platformer" time="Yesterday" type="game" />
-                  <ActivityItem title="Earned 'Code Master' badge" time="2 days ago" type="code" />
+                  <ActivityItem title="Added more workshop" time="2025-10-29T15:30:00Z" type="code" />
+                  <ActivityItem title="Added new koans" time="5 hours ago" type="code" />
+                  <ActivityItem title="New game added" time="Yesterday" type="game" />
+                  <ActivityItem title="New community members" time="2 days ago" type="code" />
                 </div>
               </div>
 
@@ -127,7 +129,7 @@ const Dashboard = () => {
                   <h4 className="font-bold text-[#e8f5e9]">Pro Tip</h4>
                 </div>
                 <p className="text-[#7a9681] text-sm leading-relaxed">
-                  Use keyboard shortcuts to speed up your workflow. Press 'Ctrl + K' to quickly search for projects.
+                  Use keyboard shortcuts to better experience. Press 'F11' to full screen.
                 </p>
               </div>
             </div>

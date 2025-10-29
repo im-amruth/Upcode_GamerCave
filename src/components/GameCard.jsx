@@ -1,85 +1,73 @@
-import { Layout, Play } from "lucide-react";
+import { useState } from "react";
+import { Clock, Users } from "lucide-react";
 
-const GameCard = ({
-    title,
-    Icon = Layout,
-    previewImage,
-    gamePath,
-    subtitle,
-    body,
-}) => {
-    return (
-        <div className="group relative w-full max-w-sm">
-            {/* Glow effect on hover */}
-            <div className="absolute -inset-0.5 bg-linear-to-r from-white/10 to-white/5 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
-            {/* Preview Image */}
-            <div
-                className="relative w-full h-full
-        bg-linear-to-br from-white/[0.07] to-white/2
-        backdrop-blur-sm border border-white/10 
-        shadow-[0_8px_32px_rgba(0,0,0,0.4)]
-        transition-all duration-500 
-        text-slate-200 rounded-2xl p-3
-        hover:border-white/20
-        hover:-translate-y-1 space-y-4"
-            >
-                {previewImage && (
-                    <div className="relative h-48 rounded-t-lg overflow-hidden bg-(--bg-secondary)">
-                        <img
-                            src={previewImage}
-                            alt={title}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-linear-to-t from-[#1a2622] to-transparent opacity-60"></div>
-                    </div>
-                )}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 h-0.5 w-32 bg-linear-to-r from-transparent via-white/30 to-transparent"></div>
-                {/* Card Header */}
-                <div className="flex items-start gap-4 mb-4">
-                    {Icon && (
-                        <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-colors duration-300">
-                            <Icon className="w-6 h-6 text-white/80 group-hover:text-white transition-colors" />
-                        </div>
-                    )}
-                    <div className="flex-1">
-                        <h3 className="text-white text-lg font-semibold mb-1 group-hover:text-white transition-colors">
-                            {title}
-                        </h3>
-                        {subtitle && (
-                            <p className="text-white/50 text-sm font-mono">{subtitle}</p>
-                        )}
-                    </div>
-                </div>
+const GameCard = ({ title, Icon, previewImage, gamePath, subtitle, body, difficulty, players, playtime }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-                {/* Card Content */}
-                <div className="mb-6">
-                    <p className="text-white/70 text-sm leading-relaxed">{body}</p>
-                </div>
-
-                {/* Divider */}
-                <div className="h-px w-full bg-linear-to-r from-transparent via-white/10 to-transparent mb-4"></div>
-
-                {/* Card Footer */}
-                <div className="flex gap-3">
-                    {gamePath && (
-                        <a
-                            href={gamePath}
-                            rel="noopener noreferrer"
-                            className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 
-                       border border-white/20 rounded-lg
-                       text-white/80 text-sm font-medium
-                       hover:bg-white/5 hover:border-white/30 hover:text-white
-                       transition-all duration-300
-                       group/btn"
-                        >
-                            <Play className="w-4 h-4 group-hover/btn:rotate-90 transition-transform" />
-                            Play
-                        </a>
-                    )}
-                </div>
-            </div>
+  return (
+    <div 
+      className="group relative bg-[#1a2622]/50 rounded-2xl border border-[#00ff87]/10 overflow-hidden hover:border-[#00ff87]/30 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Image */}
+      <div className="relative h-48 overflow-hidden">
+        <img 
+          src={previewImage} 
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0a0f0d] via-[#0a0f0d]/50 to-transparent"></div>
+        
+        {/* Difficulty Badge */}
+        <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-semibold ${
+          difficulty === 'Easy' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
+          difficulty === 'Medium' ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' :
+          'bg-red-500/20 text-red-400 border border-red-500/30'
+        }`}>
+          {difficulty}
         </div>
-    );
+
+        {/* Icon */}
+        <div className="absolute top-3 left-3 p-2 bg-[#00ff87]/20 backdrop-blur-sm rounded-lg border border-[#00ff87]/30">
+          <Icon className="w-5 h-5 text-[#00ff87]" />
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-6">
+        <h3 className="text-xl font-bold text-[#e8f5e9] mb-2 group-hover:text-[#00ff87] transition-colors">
+          {title}
+        </h3>
+        <p className="text-sm text-[#00ff87] mb-2">{subtitle}</p>
+        <p className="text-sm text-[#b9d9be] mb-4 line-clamp-2">{body}</p>
+
+        {/* Stats */}
+        <div className="flex items-center gap-4 text-xs text-[#7a9681] mb-4">
+          <div className="flex items-center gap-1">
+            <Users className="w-4 h-4" />
+            <span>{players}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Clock className="w-4 h-4" />
+            <span>{playtime}</span>
+          </div>
+        </div>
+
+        {/* Play Button */}
+        <button 
+          onClick={() => window.location.href = gamePath}
+          className={`w-full py-2.5 rounded-lg font-semibold transition-all duration-300 ${
+            isHovered 
+              ? 'bg-[#00ff87] text-[#0a0f0d] shadow-lg shadow-[#00ff87]/50' 
+              : 'bg-[#00ff87]/10 text-[#00ff87] border border-[#00ff87]/30'
+          }`}
+        >
+          Play Now
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default GameCard;
