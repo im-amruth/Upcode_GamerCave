@@ -141,7 +141,7 @@ const Header = ({ setSidebarOpen }) => {
             {unreadCount > 0 && (
               <>
                 <span className="absolute top-1 right-1 w-2 h-2 bg-[#00ff87] rounded-full animate-ping"></span>
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-white text-xs flex items-center justify-center font-bold shadow-lg">
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-linear-to-r from-emerald-500 to-teal-500 rounded-full text-white text-xs flex items-center justify-center font-bold shadow-lg">
                   {unreadCount}
                 </span>
               </>
@@ -158,9 +158,9 @@ const Header = ({ setSidebarOpen }) => {
               ></div>
 
               {/* Dropdown Panel */}
-              <div className="absolute top-full right-0 mt-2 w-96 max-h-[32rem] overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-900/95 to-teal-900/95 backdrop-blur-xl border-2 border-emerald-500/30 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 duration-300">
+              <div className="absolute top-full right-0 mt-2 w-96 max-h-128 overflow-hidden rounded-2xl bg-linear-to-br from-emerald-900/95 to-teal-900/95 backdrop-blur-xl border-2 border-emerald-500/30 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 duration-300">
                 {/* Header */}
-                <div className="sticky top-0 bg-gradient-to-r from-emerald-800/50 to-teal-800/50 backdrop-blur-sm px-4 py-3 border-b border-emerald-500/20">
+                <div className="sticky top-0 bg-linear-to-r from-emerald-800/50 to-teal-800/50 backdrop-blur-sm px-4 py-3 border-b border-emerald-500/20">
                   <div className="flex items-center justify-between">
                     <h3 className="text-lg font-bold text-emerald-100">Notifications</h3>
                     {unreadCount > 0 && (
@@ -175,7 +175,7 @@ const Header = ({ setSidebarOpen }) => {
                 </div>
 
                 {/* Notifications List */}
-                <div className="overflow-y-auto max-h-[28rem] custom-scrollbar">
+                <div className="overflow-y-auto max-h-112 custom-scrollbar">
                   {notifications.length === 0 ? (
                     <div className="flex flex-col items-center justify-center py-12 text-emerald-400/60">
                       <Bell className="w-12 h-12 mb-3 opacity-40" />
@@ -192,12 +192,12 @@ const Header = ({ setSidebarOpen }) => {
                             className={`group relative p-3 rounded-xl border transition-all duration-300 cursor-pointer ${
                               notification.read 
                                 ? 'bg-emerald-950/30 border-emerald-500/10 opacity-70 hover:opacity-100' 
-                                : 'bg-gradient-to-br from-emerald-800/40 to-teal-800/40 border-emerald-500/30 hover:border-emerald-400/50 shadow-lg'
+                                : 'bg-linear-to-br from-emerald-800/40 to-teal-800/40 border-emerald-500/30 hover:border-emerald-400/50 shadow-lg'
                             }`}
                           >
                             <div className="flex gap-3">
                               {/* Icon */}
-                              <div className={`flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br ${getColorClasses(notification.color)} border flex items-center justify-center`}>
+                              <div className={`shrink-0 w-10 h-10 rounded-lg bg-linear-to-br ${getColorClasses(notification.color)} border flex items-center justify-center`}>
                                 <NotifIcon className="w-5 h-5" />
                               </div>
 
@@ -208,7 +208,7 @@ const Header = ({ setSidebarOpen }) => {
                                     {notification.title}
                                   </h4>
                                   {!notification.read && (
-                                    <div className="flex-shrink-0 w-2 h-2 bg-emerald-400 rounded-full mt-1"></div>
+                                    <div className="shrink-0 w-2 h-2 bg-emerald-400 rounded-full mt-1"></div>
                                   )}
                                 </div>
                                 <p className="text-xs text-emerald-300/80 mb-2 line-clamp-2">
@@ -225,7 +225,7 @@ const Header = ({ setSidebarOpen }) => {
                                   e.stopPropagation();
                                   deleteNotification(notification.id);
                                 }}
-                                className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-red-500/20 rounded-lg"
+                                className="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-red-500/20 rounded-lg"
                               >
                                 <X className="w-4 h-4 text-red-400" />
                               </button>
