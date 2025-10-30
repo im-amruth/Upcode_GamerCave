@@ -11,6 +11,7 @@ import GameCard from '../components/GameCard';
 import { Link } from "react-router-dom";
 import { koans } from "../data/koans";
 import { timeAgo } from "../utils/timeManager";
+import { games } from "../data/games";
 
 const StatCard = ({  Icon=Layout, label, value, trend }) => (
   <div className="bg-[#1a2622] border border-[#00ff87]/10 rounded-xl p-6 hover:border-[#00ff87]/30 transition-all duration-300">
@@ -45,26 +46,6 @@ const ActivityItem = ({ title, time, type }) => (
 );
 
 const Dashboard = () => {
-
-  const games = [
-    {
-      title: "Emoji Guess Game",
-      Icon: Gamepad2,
-      previewImage: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=300&fit=crop",
-      gamePath: "/games/emoji",
-      subtitle: "Classic arcade shooter",
-      body: "Defend Earth from alien invaders in this retro-style game built with JavaScript and Canvas."
-    },
-    {
-      title: "Logo Guess Game",
-      Icon: Code,
-      previewImage: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
-      gamePath: "/games/logo",
-      subtitle: "Programming puzzle game",
-      body: "Solve coding challenges to progress through levels and unlock new abilities."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-[#0a0f0d] text-[#e8f5e9]">
       {/* Animated background */}
@@ -87,7 +68,7 @@ const Dashboard = () => {
 
           {/* Stats Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <StatCard icon={Gamepad2} label="Total Games" value="7" trend="+5 new added" />
+            <StatCard icon={Gamepad2} label="Total Games" value={games.length} trend="+5 new added" />
             <StatCard icon={Code} label="Workshop Materials" value={koans.length || 4} trend="15+ Koans" />
             <StatCard icon={Users} label="Cheatsheets" value="6" trend="+6" />
             <StatCard icon={Trophy} label="Community" value="10" trend="3 new members" />
@@ -105,7 +86,7 @@ const Dashboard = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-center">
-                {games.map((game, idx) => (
+                {games.slice(0, 2).map((game, idx) => (
                   <GameCard key={idx} {...game} />
                 ))}
               </div>

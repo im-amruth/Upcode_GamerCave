@@ -250,15 +250,6 @@ const CheatsheetApp = () => {
           )}
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="relative mt-32 border-t border-[#4caf50]/10 bg-[#0a0f0d]/50 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center text-[#7a9681] text-sm">
-            <p>© 2025 Upcode GamerCave. Built for developers, by developers.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
