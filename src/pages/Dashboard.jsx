@@ -2,10 +2,10 @@ import {
   Gamepad2,
   Code,
   Users,
-  Trophy,
   TrendingUp,
   Star,
-  Layout
+  Layout,
+  Sheet
 } from "lucide-react";
 import GameCard from '../components/GameCard';
 import { Link } from "react-router-dom";
@@ -68,10 +68,10 @@ const Dashboard = () => {
 
           {/* Stats Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <StatCard icon={Gamepad2} label="Total Games" value={games.length} trend="+5 new added" />
-            <StatCard icon={Code} label="Workshop Materials" value={koans.length || 4} trend="15+ Koans" />
-            <StatCard icon={Users} label="Cheatsheets" value="6" trend="+6" />
-            <StatCard icon={Trophy} label="Community" value="10" trend="3 new members" />
+            <StatCard Icon={Gamepad2} label="Total Games" value={games.length} trend="+5 new added" />
+            <StatCard Icon={Code} label="Workshop Materials" value={koans.length || 4} trend="15+ Koans" />
+            <StatCard Icon={Sheet} label="Cheatsheets" value="6" trend="+6" />
+            <StatCard Icon={Users} label="Community" value="10" trend="3 new members" />
           </div>
 
           {/* Main Grid */}
